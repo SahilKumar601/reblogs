@@ -1,23 +1,33 @@
 import './index.css'
-import {useState} from 'react';
+import { useState, useEffect } from 'react';
 import BlogList from './BlogLists';
 
 const Home = () => {
-    const [blog, setblog] = useState([
-        {title:'New day in LA', body:"lorem ispne .......", author:"James", id:1},
-        {title:'Welcome Party', body:"lorem ispne .......", author:"James", id:2},
-        {title:'Game Fest', body:"lorem ispne .......", author:"James", id:3},
-        {title:'Riot on Streets', body:"lorem ispne .......", author:"James", id:4}
-    ]);
+    const [blog, setblog] = useState([null]);
+    const [ispending,setpending]=useState(true);
     function handleDelete(id){
         const newblogs=blog.filter(blog => blog.id !== id);
         setblog(newblogs);
     }
+    useEffect(()=>{
+        console.log('use effect arn')
+        setTimeout(()=>{
+            fetch("http://localhost:4040/blog")
+            .then((res)=>{
+                return res.json();
+            })
+            .then(data=>{
+                setblog(data);
+                setpending(false)
+            });
+        },1000)
+    },[])
     return ( 
         <div className="content">
-            <BlogList  blogs={blog} title="New Blogs" Delete={handleDelete}/>
+            {ispending&&<div>Is Loading</div>}
+            {/* {blog && <BlogList  blogs={blog} title="New Blogs"/>}; */}
         </div>
-     );
+     )
 }
  
 export default Home;
