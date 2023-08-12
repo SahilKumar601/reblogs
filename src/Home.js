@@ -1,5 +1,4 @@
 import './index.css';
-import { useState, useEffect } from 'react';
 import BlogList from './BlogLists';
 import useFetch from './useFetch';
 
@@ -11,7 +10,7 @@ const Home = () => {
             {ispending && <div>Is Loading</div>}
             {blog && <BlogList blogs={blog} title="New Blogs" />}
         </div>
-    );
+    )
 }
 
 export default Home;
