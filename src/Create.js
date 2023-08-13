@@ -1,6 +1,8 @@
 import { useState } from "react";
+import {  useNavigate } from "react-router-dom";
 
 const Create = () => {
+    const navigate=useNavigate();
     const [title,setTitle]=useState('');
     const [body,setBody]=useState('');
     const [author,setAuthor]=useState('');
@@ -13,6 +15,7 @@ const Create = () => {
             body:JSON.stringify(blog)
         }).then(()=>{
             console.log("Blog Added");
+            navigate('/');
         })
     }
     return ( 

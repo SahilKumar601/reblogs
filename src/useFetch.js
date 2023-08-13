@@ -4,7 +4,7 @@ const useFetch = (url) => {
     const [error,seterror]=useState();
     const [data, setdata] = useState([]);
     const [ispending, setpending] = useState(true);
-    const controller=new AbortController;
+    const controller=new AbortController();
     useEffect(() => {
         setTimeout(() => {
             fetch(url)

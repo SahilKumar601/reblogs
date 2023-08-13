@@ -25,10 +25,16 @@
       "id": 4
     },
     {
-      "title": "Valorant Champion's Trophy",
-      "body": "The new Valorant skin \"Vandal\" offers players a visually striking and immersive in-game weapon customization option. This skin, designed to enhance gameplay aesthetics, showcases intricate details and unique visual effects, providing a fresh and engaging experience for players. With a combination of vibrant colors, intricate patterns, and a futuristic design, the Vandal skin not only delivers a sense of personalization but also complements the game's overall visual style. As players wield this skin in the game, they can enjoy the seamless integration of the Vandal's design with its firing animations, reload sequences, and other weapon interactions. The skin not only appeals to players' desire for aesthetic diversity but also adds an element of individuality to their gameplay, making each encounter more visually captivating. Overall, the new Valorant Vandal skin contributes to the immersive world-building and player engagement that Valorant is known for, giving players the opportunity to stand out on the battlefield while appreciating the artistry of the skin's design.",
-      "author": "ChatGBT",
-      "id": 5
+      "title": "Introduction to React Hooks",
+      "body": "Learn how to use React hooks for state management and effects.",
+      "author": "JonDoe",
+      "id": 6
+    },
+    {
+      "title": "Mastering CSS Grid Layout",
+      "body": "Discover the power of CSS Grid for creating complex layouts.",
+      "author": "John Smith",
+      "id": 7
     }
   ]
 }
